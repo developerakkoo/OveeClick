@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+<ion-buttons slot="start">
+  <ion-back-button defaultHref=""></ion-back-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-grid  fixed>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size="10">
+  <!-- <ion-img src="https://image.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg"></ion-img> -->
+       <ion-text style="color:lightgray; margin: 0px;">
+         <h1 style="font-family: Futura;">Welcome user,</h1>
+         <p style="font-family: Futura;">please register your account. </p>
+       </ion-text>
+      </ion-col>
+      <ion-col class="ion-margin" size="10" offset="">
+         <ion-input class="inputfields-top" type="text" placeholder="Fullname"></ion-input>
+       <ion-input class="inputfields-top" type="text" placeholder="Mobile Number"></ion-input>
+
+       <ion-input class="inputfields-top" type="text" placeholder="Email"></ion-input>
+       <ion-input class="inputfields-bottom" type="text" placeholder="Password"></ion-input>
+
+       <ion-list>
+        <ion-radio-group (ionChange)="whoAreYou($event)">
+          <ion-list-header>
+            <ion-text class="ion-text-center" style="color:lightgray; margin: 0px;">
+             Who are you?
+            </ion-text>
+          </ion-list-header>
+      
+          <ion-item class="ion-no-border" lines="none">
+            <ion-label>Advertiser</ion-label>
+            <ion-radio value="advertiser"></ion-radio>
+          </ion-item>
+      
+          <ion-item class="ion-no-border" lines="none">
+            <ion-label>User</ion-label>
+            <ion-radio value="user"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+       <ion-button class="btn-text"(click)="onRegister()" expand="block">
+         REGISTER
+       </ion-button>
+       
+  
+    
+       <ion-label class="label">Already have an account?<b routerLink="" style="color: #428cff;">SignIn here</b></ion-label> 
+  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+      
+      
+      
+  </ion-content>
+  

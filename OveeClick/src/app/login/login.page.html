@@ -1,0 +1,31 @@
+
+
+<ion-content>
+ 
+<ion-grid style="margin-top:30%" fixed>
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="ion-align-self-center" size="10">
+<ion-img src="https://image.freepik.com/free-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg"></ion-img>
+     <ion-text style="color:lightgray; margin: 0px;">
+       <h1 style="font-family: Futura;">Welcome back,</h1>
+       <p style="font-family: Futura;">please login to your account. </p>
+     </ion-text>
+    </ion-col>
+    <ion-col size="10" offset="">
+     <ion-input class="inputfields-top" type="text" placeholder="Email"></ion-input>
+     <ion-input class="inputfields-bottom" type="text" placeholder="Password"></ion-input>
+     <ion-button class="btn-text"(click)="onClick()" expand="block">
+       LOGIN
+     </ion-button>
+     <ion-label class="label">Forgot your password? <b  routerLink="reset-password" style="color: #428cff;"> 
+
+   Reset your password</b></ion-label><br>
+     <ion-label class="label">Don't have an account? <b routerLink="/register" style="color: #428cff;">Signup now</b></ion-label> 
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+    
+    
+    
+</ion-content>
