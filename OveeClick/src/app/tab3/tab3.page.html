@@ -1,17 +1,61 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border" [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title class="font-title" size="large">Your Profile</ion-title>
+      <ion-title class="font-title" size="large">Profile</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid  fixed>
+    <ion-row  class="ion-justify-content-center">
+      <ion-col style="display: flex; justify-content: center;"class="ion-no-margin" class="ion-align-self-center" size="12">
+       <ion-avatar style=" box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+       transition: 0.3s;">
+         <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg" />
+       </ion-avatar>
+      </ion-col>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+      <ion-col size="12">
+        <ion-text class="ion-text-center" color="dark">
+          <h4>Json Smith</h4>
+          <h6 style="font-family: Futura; color:gray">US California</h6>
+          <h6 style="font-family: Futura; color:gray">8007477149</h6>
+        </ion-text>
+      </ion-col>
+      <!-- <ion-col size="12">
+        <ion-input class="inputfields-top" type="text" placeholder="Full Name"></ion-input>
+        <ion-input class="inputfields-bottom" type="text" placeholder="Address"></ion-input>
+        <ion-input class="inputfields-bottom" type="text" placeholder="Mobile Number"></ion-input>
+
+        <ion-input class="inputfields-bottom" type="text" placeholder="Email"></ion-input>
+        <ion-button class="btn-text"(click)="onClick()" expand="block">
+          SAVE
+        </ion-button>
+      </ion-col> -->
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-footer class="ion-no-border" >
+  <ion-toolbar>
+    <ion-button color="primary" expand="block" (click)="onClick()">
+      <ion-icon slot="start" name="pie-chart"></ion-icon>
+      View Activity
+    </ion-button>
+   <ion-button color="danger" expand="block" (click)="onClick()">
+     <ion-icon slot="start" name="person-remove"></ion-icon>
+     Delete Account
+   </ion-button>
+  </ion-toolbar>
+</ion-footer>
