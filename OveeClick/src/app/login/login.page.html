@@ -5,23 +5,41 @@
 <ion-grid style="margin-top:30%" fixed>
   <ion-row class="ion-justify-content-center">
     <ion-col class="ion-align-self-center" size="10">
-<ion-img src="https://image.freepik.com/free-vector/online-registration-sign-up-with-man-sitting-near-smartphone_268404-95.jpg"></ion-img>
-     <ion-text style="color:lightgray; margin: 0px;">
+     <ion-text style="color:white; margin: 0px;">
        <h1 style="font-family: Futura;">Welcome back,</h1>
        <p style="font-family: Futura;">please login to your account. </p>
      </ion-text>
     </ion-col>
     <ion-col size="10" offset="">
-     <ion-input class="inputfields-top" type="text" placeholder="Email"></ion-input>
-     <ion-input class="inputfields-bottom" type="text" placeholder="Password"></ion-input>
-     <ion-button class="btn-text"(click)="onClick()" expand="block">
-       LOGIN
+     
+      
+      <ion-input style="border-radius: 20px;" class="inputfields-top" type="text" placeholder="Email">
+        <ion-icon style="padding:10px;" name="person" slot="end"></ion-icon></ion-input>
+
+     <ion-input style="border-radius: 20px;" class="inputfields-bottom" type="text" placeholder="Password">
+      <ion-icon style="padding:10px;" name="lock-closed" slot="end"></ion-icon>
+    </ion-input>
+     <ion-button color="light" class="btn-text"(click)="onClick()" expand="block"  shape="round">
+       Let's GO
      </ion-button>
-     <ion-label class="label">Forgot your password? <b  routerLink="reset-password" style="color: #428cff;"> 
+     <ion-label class="label"> <b  routerLink="reset-password" style="color:white;"> 
 
-   Reset your password</b></ion-label><br>
-     <ion-label class="label">Don't have an account? <b routerLink="/register" style="color: #428cff;">Signup now</b></ion-label> 
+      Forgot your password?</b></ion-label><br>
 
+      <ion-text style="font-family: Futura;" class="ion-text-center" color="light">
+        <h4>Login with</h4>
+      </ion-text>
+    </ion-col>
+
+    <ion-col size="10">
+      <ion-button color="light" class="btn-text"expand="block"  shape="round" (click)="onClick()">
+        Google
+            <img style="width:15px; margin-left: 5px;" src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" /> </ion-button>
+      <ion-button color="light" class="btn-text" expand="block"  shape="round" (click)="onClick()">
+        Facebook<ion-icon style="padding:5px; color:	#4267B2;"  name="logo-facebook"></ion-icon>
+      </ion-button>
+    </ion-col> <ion-col size="6">
+     
     </ion-col>
   </ion-row>
 </ion-grid>
@@ -29,3 +47,9 @@
     
     
 </ion-content>
+<ion-footer>
+  <ion-toolbar style="text-align:center;">
+    <ion-label class="label">Don't have an account? <b routerLink="/register" style="color: orange;">Signup now</b></ion-label> 
+    
+  </ion-toolbar>
+</ion-footer>

@@ -12,19 +12,16 @@
     <ion-row class="ion-justify-content-center">
       <ion-col class="ion-align-self-center" size="10">
   <!-- <ion-img src="https://image.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg"></ion-img> -->
-       <ion-text style="color:lightgray; margin: 0px;">
-         <h1 style="font-family: Futura;">Welcome user,</h1>
-         <p style="font-family: Futura;">please register your account. </p>
-       </ion-text>
+       
       </ion-col>
       <ion-col class="ion-margin" size="10" offset="">
          <ion-input class="inputfields-top" type="text" placeholder="Fullname"></ion-input>
        <ion-input class="inputfields-top" type="text" placeholder="Mobile Number"></ion-input>
 
        <ion-input class="inputfields-top" type="text" placeholder="Email"></ion-input>
-       <ion-input class="inputfields-bottom" type="text" placeholder="Password"></ion-input>
+       <ion-input class="inputfields-top" type="text" placeholder="Password"></ion-input>
 
-       <ion-list>
+       <ion-list style="margin-top:5px;" color="transparent">
         <ion-radio-group (ionChange)="whoAreYou($event)">
           <ion-list-header>
             <ion-text class="ion-text-center" style="color:lightgray; margin: 0px;">
@@ -44,13 +41,12 @@
         </ion-radio-group>
       </ion-list>
 
-       <ion-button class="btn-text"(click)="onRegister()" expand="block">
+       <ion-button color="light" class="btn-text"(click)="onRegister()" expand="block"  shape="round" fill="outline">
          REGISTER
        </ion-button>
        
   
     
-       <ion-label class="label">Already have an account?<b routerLink="" style="color: #428cff;">SignIn here</b></ion-label> 
   
       </ion-col>
     </ion-row>
